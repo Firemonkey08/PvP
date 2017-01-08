@@ -90,7 +90,7 @@ public class Methoden implements Listener{
 		objMAD.setDisplayName("Zeit als Flüchtling");
 		
 		
-        for(Player p : Bukkit.getWorld("arenabau").getPlayers()){
+        for(Player p : EventP.getLocation().getWorld().getPlayers()){
             p.sendMessage("Vorbereitungen getroffen für PvP");
         }
         Playerleft = false;
@@ -139,7 +139,7 @@ public class Methoden implements Listener{
 		        
 		        obj.setDisplayName("Kills (" + Integer.toString(kills_Sieg) + ")");
 
-		        for(Player p : Bukkit.getWorld("arenabau").getPlayers()){
+		        for(Player p : Bukkit.getWorld(aktive_welt).getPlayers()){
 		            p.sendMessage("Arena " + aktive_arena + " ausgewählt");
 		        }
 	        }
@@ -171,7 +171,7 @@ public class Methoden implements Listener{
 	    }
 	    else {
 	    	rot.addPlayer(playerrot);
-	        for(Player p : Bukkit.getWorld("arenabau").getPlayers()){
+	        for(Player p : playerrot.getLocation().getWorld().getPlayers()){
 	            p.sendMessage(ChatColor.AQUA + playerrot.getName() + ChatColor.WHITE+	" ist jetzt in Team " + ChatColor.RED + "rot!");
 	        }
 	    }
@@ -195,7 +195,7 @@ public class Methoden implements Listener{
 	    else {
 	    	blau.addPlayer(playerblau);
 	    	playerblau.setScoreboard(board);
-	        for(Player p : Bukkit.getWorld("arenabau").getPlayers()){
+	        for(Player p : playerblau.getLocation().getWorld().getPlayers()){
 	        	p.sendMessage(ChatColor.AQUA + playerblau.getName() + ChatColor.WHITE+	" ist jetzt in Team " + ChatColor.BLUE + "blau!");
 	        }
 	    }
