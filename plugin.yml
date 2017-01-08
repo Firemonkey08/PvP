@@ -1,0 +1,12 @@
+name: pvp
+main: me.luc.pvp.pvp
+version: 0.1
+description: PvP Plugin Freaks
+website: Bukkit.org
+author: Jean
+commands:   
+  pvp:
+    description: Pvp Vorbereitungen
+    usage: /<command>
+    permission: pvp
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
